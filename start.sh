@@ -4,6 +4,8 @@
 STRPATH="$1"
 STRLOG="$2"
 
+$(source /etc/profile)
+
 # 判断是否传递路径
 if [ "$STRPATH" = "" ]; then
 	STRPATH="/var/www/docker"
