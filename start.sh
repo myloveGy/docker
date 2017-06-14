@@ -105,3 +105,4 @@ fi
 echo "$STRREDIS" >> ${STRLOG}
 DATE=$(date '+%Y-%m-%d %T')
 echo "[$DATE] end" >> ${STRLOG}
+

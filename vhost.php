@@ -15,6 +15,8 @@ $strPhp = array_shift($argv);
 
 // window hosts 文件位置
 define('WINDOW_HOST', 'C:/Windows/System32/drivers/etc/hosts');
+// apache2.4 服务名称
+define('APACHE_NAME', 'apache2.4');
 // apache2.4 虚拟目录配置文件目录
 define('APACHE_VHOST_PATH', 'D:/server/vhost/');
 // docker nginx 虚拟目录配置文件目录
@@ -139,6 +141,11 @@ if ($isDomain && isset($argument['-v']) && !empty($argument['-v'])) {
     ServerName {{_DOMAIN_}}
     ErrorLog "logs/{{_DOMAIN_}}-error.log"
     CustomLog "logs/{{_DOMAIN_}}-access.log" common
+    <Directory "{{_PATH_}}">
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
 </VirtualHost>
 FILE;
             } else {
@@ -192,7 +199,7 @@ FILE;
     }
 
     if ($argument['-t'] === 'apache') {
-        exec('NET STOP httpd');
-        exec('NET START httpd');
+        exec('NET STOP ' . APACHE_NAME);
+        exec('NET START' . APACHE_NAME);
     }
 }
