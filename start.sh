@@ -4,6 +4,7 @@
 STRPATH="$1"
 STRLOG="$2"
 
+# 跟新资源
 $(source /etc/profile)
 
 # 判断是否传递路径
@@ -105,4 +106,5 @@ fi
 echo "$STRREDIS" >> ${STRLOG}
 DATE=$(date '+%Y-%m-%d %T')
 echo "[$DATE] end" >> ${STRLOG}
+
 
