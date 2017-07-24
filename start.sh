@@ -4,7 +4,7 @@
 STRPATH="$1"
 STRLOG="$2"
 
-# 跟新资源
+# 更新资源
 $(source /etc/profile)
 
 # 判断是否传递路径
