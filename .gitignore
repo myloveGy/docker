@@ -3,3 +3,5 @@
 /logs
 /lnmp-laster.tar
 /composer.phar
+/.idea
+/redis/data
