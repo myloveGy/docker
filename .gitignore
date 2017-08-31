@@ -1,5 +1,5 @@
 /vhost
-/mysql
+/mysql/data
 /logs
 /lnmp-laster.tar
 /composer.phar

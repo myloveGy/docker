@@ -17,7 +17,7 @@ services:
     volumes_from:
       - php
     volumes:
-      - /html/docker/mysql:/var/lib/mysql
+      - /html/docker/mysql/data:/var/lib/mysql
     ports:
       - "3306:3306"
   php:
