@@ -9,11 +9,11 @@ $(source /etc/profile)
 
 # 判断是否传递路径
 if [ "$STRPATH" = "" ]; then
-	STRPATH="/var/www/docker"
+	STRPATH="/www/docker/web"
 fi
 
 if [ "$STRLOG" = "" ]; then
-	STRLOG="/var/www/docker/logs"
+	STRLOG="/www/docker/logs"
 fi
 
 if [ ! -d "$STRLOG" ]; then
