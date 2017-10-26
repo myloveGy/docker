@@ -23,7 +23,6 @@ services:
     image: mysql:5.6
     environment:
       MYSQL_ROOT_PASSWORD: "gongyan"
-      explicit_defaults_for_timestamp: 1
     volumes_from:
       - php
     ports:
