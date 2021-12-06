@@ -2,9 +2,8 @@
 
 3个 `master` 、每一个下面挂一个 `slave` 节点， 总共6个 Redis 节点
 
-一、 主: 6372 端口 从: 6373 端口
+## 启动命令
 
-二、 主: 6374 端口 从: 6375 端口
-
-三、 主: 6376 端口 从: 6377 端口
-
+```
+redis-cli --cluster create --cluster-replicas 1 
+```
